@@ -7,7 +7,7 @@ class LandingPage {
     get languageList() {return $$(`//ul[@aria-labelledby="languages"] /li/a[@class="dropdown-item waves-effect"]`)}
 
     get currencyMenu() {return $(`id="currency"`)}
-    get () {return $$(`//ul[@aria-labelledby="currency"] /li/a[@class="dropdown-item waves-effect"]`)}
+    get currencyList () {return $$(`//ul[@aria-labelledby="currency"] /li/a[@class="dropdown-item waves-effect"]`)}
 
     get supplier() {return $(`id="supplier"`)}
     get supplierList() {return $$(`//ul[@aria-labelledby="supplier"] /li/a[@class="dropdown-item waves-effect"]`)}
@@ -15,8 +15,26 @@ class LandingPage {
     get agents() {return $(`id="agents"`)}
     get agentsList() {return $$(`//ul[@aria-labelledby="agents"] /li/a[@class="dropdown-item waves-effect"]`)}
 
-    get signUpButton() {`//a[@href="https://www.phptravels.net/signup"]`}
+    get signUpButton() {return $(`//a[@href="https://www.phptravels.net/signup"]`)}
     get loginButton() {return $(`href="https://www.phptravels.net/login"`)}
+
+
+//--------- Hotels Tab options
+
+    get search () {return $(`[role="searchbox"]`)}
+    get checkin() {return $(`id="checkin"`)}
+    //[class=" table-condensed"] tr td[class="day  active"]
+
+    get () {return $(`//span[@class='guest_hotels']`)}
+    get () {return $$(`[class="la la-plus"]`)}
+    get () {return $$(`[class="la la-minus"]`)}
+    get () {return $(`[id="ages1"]`)}
+    get () {return $$(`[id="submit"]`)}
+    get () {return $(``)}
+    get () {return $(``)}
+    get () {return $(``)}
+    get () {return $(``)}
+
 
     async clickMenu(index){
         await this.allMenu[index].click()
