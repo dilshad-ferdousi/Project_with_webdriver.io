@@ -83,6 +83,26 @@ class LandingPage {
     async click(){
         await this.click()
     }
+
+    async getDate(){
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+            }
+            if (mm < 10) {
+            mm = '0' + mm;
+            }
+            today = mm + '/' + dd + '/' + yyyy;
+            console.log('Todays date :', today);
+
+        console.log(this.dd)
+        console.log(this.mm)
+        console.log(this.yyyy)
+        //console.log(this.dd)
+    }
 }
 
 export default new LandingPage()
