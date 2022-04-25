@@ -22,7 +22,7 @@ exports.config = {
     //
     specs: [
        
-       
+        './Ecommerce site/test/Specs/searchProduct.js'
     ],
     // Patterns to exclude.
     exclude: [
